@@ -14,6 +14,8 @@ public:
   static Result cvtUTF8ToUTF32(const char8_t *src, std::size_t src_len,
                                std::size_t *consumed_src_bytes,
                                char32_t *out_code_point);
+  static Result cvtUTF32ToUTF16(const char32_t code_point, char16_t (&dst)[2],
+                                std::size_t *out_utf16_len);
 
   CharConverter() = delete;
   ~CharConverter() = default;
