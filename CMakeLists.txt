@@ -26,4 +26,9 @@ set(SRC_DIR "${CMAKE_SOURCE_DIR}/src")
 
 add_executable(CharConverter
   "${SRC_DIR}/main.cpp"
+  "${SRC_DIR}/UTF8ToUTF32.cpp"
+)
+
+target_include_directories(CharConverter PRIVATE
+"${SRC_DIR}/include"
 )
